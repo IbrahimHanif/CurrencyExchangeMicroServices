@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: api-gateway-service
+  sleuth:
+    trace-id128: true
+    sampler:
+      probability: 1.0
+  zipkin:
+    base-url: http://192.168.99.103:9411/
+  rabbitmq:
+    host: 192.168.99.103
+    port: 5672
+  cloud:
+    bus:
+      enabled: true
+      destination: configXchangebus
+  
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka
+server:
+  port: 8765
+            
