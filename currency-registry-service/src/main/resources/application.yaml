@@ -1,9 +1,16 @@
 spring:
   application:
-    name: currency-registry-service
+#    name: currency-registry-service
+     name: currency-eurekaregistry-service-new
 server:
-  port: 8761
+  port: 8763
 eureka:
+  instance:
+    preferIpAddress: true
+    hostname: currency-eurekaregistry-service-new
   client:
-    register-with-eureka: false
-    fetch-registry: false
+    registerWithEureka: false
+    fetchRegistry: false    serviceUrl:      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    enable-self-preservation: false
+    max-threads-for-peer-replication: 0

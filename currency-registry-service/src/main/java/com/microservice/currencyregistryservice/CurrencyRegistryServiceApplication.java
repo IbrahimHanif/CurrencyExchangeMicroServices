@@ -10,6 +10,7 @@ public class CurrencyRegistryServiceApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(CurrencyRegistryServiceApplication.class, args);
+		System.out.println("Test1");
 	}
 
 }
